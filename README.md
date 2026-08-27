@@ -2,6 +2,7 @@
 Repository for project I'm creating for MIS 310 in Fall 2026
 
 Site Title: Understanding Your Digital Footprint
+
 Site Topic: An educational website that helps college students understand how their digital footprint can affect future career opportunities and personal reputation.
 
 Target Audience: College students who want to better understand how their online presence may be viewed by employers, graduate schools, and professional organizations. The site is designed to help students make informed decisions about their digital identity.
