@@ -69,6 +69,29 @@
                 color: var(--sage-deep);
                 font-weight: 600;
             }
+
+            .hero-intro {
+                max-width: 680px;
+                margin: 0 auto 28px;
+                font-size: 1.15rem;
+            }
+
+            .cta-button {
+                display: inline-block;
+                padding: 12px 22px;
+                border-radius: 8px;
+                background: var(--sage-deep);
+                color: #ffffff;
+                text-decoration: none;
+                font-size: 1rem;
+                font-weight: bold;
+                transition: background-color 0.2s ease, transform 0.2s ease;
+            }
+
+            .cta-button:hover {
+                background: var(--text);
+                transform: translateY(-2px);
+            }
         </style>
     </head>
     <body>
@@ -82,7 +105,8 @@
         <main>
             <div class="card">
                 <h1>Understanding Your Digital Footprint</h1>
-                <p class="subheading">Isabelle Carter</p>
+                <p class="hero-intro">Your online activity creates a lasting picture of who you are. Learn what makes up your digital footprint, how it can affect your future, and what you can do to manage it.</p>
+                <a class="cta-button" href="education.html">Learn About Digital Footprints</a>
             </div>
         </main>
     </body>
