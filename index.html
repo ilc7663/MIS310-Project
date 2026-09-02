@@ -128,9 +128,52 @@
                 font-size: 1.05rem;
             }
 
+            .footprint-comparison {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 1.25rem;
+            }
+
+            .footprint-card {
+                padding: 1.75rem;
+                margin-bottom: 0;
+                box-shadow: 0 10px 24px var(--shadow);
+            }
+
+            .footprint-card h3 {
+                margin: 0 0 0.5rem;
+                color: var(--sage-700);
+                font-size: 1.6rem;
+            }
+
+            .footprint-card p {
+                margin: 0 0 1rem;
+                color: var(--muted);
+            }
+
+            .footprint-card ul {
+                margin: 0;
+                padding-left: 1.25rem;
+                color: var(--ink);
+            }
+
+            .bottom-line {
+                margin-top: 1.25rem;
+                border-left: 5px solid var(--khaki-400);
+            }
+
+            .bottom-line p {
+                margin: 0.5rem 0;
+                color: var(--muted);
+            }
+
             @media (max-width: 600px) {
                 .card {
                     padding: 1.5rem 1.25rem;
+                }
+
+                .footprint-comparison {
+                    grid-template-columns: 1fr;
                 }
 
                 nav {
@@ -165,6 +208,42 @@
                 <p>Every time you post, comment, search, shop, or create an account online, you may leave behind information about yourself. Some of this information is shared intentionally, while some may be collected in the background. Over time, these pieces of information can become part of your digital identity.</p>
                 <p>For college students, understanding this matters because your online presence can become relevant when you apply for internships, jobs, graduate programs, or other professional opportunities.</p>
             </div>
+
+            <section aria-labelledby="footprint-types-heading">
+                <h2 id="footprint-types-heading">Active vs. Passive</h2>
+                <div class="footprint-comparison">
+                    <article class="card footprint-card">
+                        <h3>Active</h3>
+                        <p>Information you intentionally share online.</p>
+                        <ul>
+                            <li>Social media posts</li>
+                            <li>Comments</li>
+                            <li>Online forms</li>
+                            <li>Emails</li>
+                            <li>Photos and videos</li>
+                        </ul>
+                    </article>
+
+                    <article class="card footprint-card">
+                        <h3>Passive</h3>
+                        <p>Information collected through your online activity.</p>
+                        <ul>
+                            <li>Browsing history</li>
+                            <li>Website visits</li>
+                            <li>Cookies and trackers</li>
+                            <li>Location data</li>
+                            <li>Device information</li>
+                            <li>Shopping activity</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div class="card bottom-line">
+                    <h2>The Bottom Line</h2>
+                    <p><strong>Active footprint:</strong> What you intentionally put online.</p>
+                    <p><strong>Passive footprint:</strong> What your online activity leaves behind.</p>
+                </div>
+            </section>
         </main>
     </body>
 </html>
