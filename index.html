@@ -137,13 +137,26 @@
             .footprint-card {
                 padding: 1.75rem;
                 margin-bottom: 0;
+                border-radius: 14px;
                 box-shadow: 0 10px 24px var(--shadow);
+            }
+
+            .footprint-card:first-child {
+                background: linear-gradient(145deg, #f6fbf5, #e5f0e5);
+                border-top: 5px solid var(--sage-500);
+            }
+
+            .footprint-card:last-child {
+                background: linear-gradient(145deg, #fffdf5, #f3eedb);
+                border-top: 5px solid var(--khaki-400);
             }
 
             .footprint-card h3 {
                 margin: 0 0 0.5rem;
                 color: var(--sage-700);
                 font-size: 1.6rem;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
             }
 
             .footprint-card p {
