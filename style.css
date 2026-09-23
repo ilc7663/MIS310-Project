@@ -16,7 +16,7 @@ nav {
     background: rgba(255, 255, 255, 0.9);
     border-bottom: 1px solid #9eb7a0;
     box-shadow: 0 2px 8px rgba(36, 49, 39, 0.06);
-}
+}  n
 
 nav a {
     display: inline-block;
@@ -112,7 +112,7 @@ main {
     border-radius: 18px;
     border: 1px solid #d4e0d4;
     padding: 22px 20px;
-    box-shadow: 0 6px 14px rgba(36, 49, 39, 0.05);
+    box-shadow: 0 10px 16px rgba(36, 49, 39, 0.05);
 }
 
 .footprint-card:first-child {
