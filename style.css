@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -52,6 +56,46 @@ main {
     max-width: 900px;
     margin: 0 auto;
     padding: 30px 0 40px;
+}
+
+.site-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto 28px;
+    padding: 18px 20px 10px;
+    border-top: 1px solid #c9d8ca;
+    color: #405a46;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+.footer-link {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: linear-gradient(180deg, #f7faf7 0%, #edf4ee 100%);
+    border: 1px solid #d7e1d7;
+    color: #405a46;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.footer-link:hover,
+.footer-link:focus-visible {
+    background: linear-gradient(180deg, #dfeee0 0%, #cfe0d1 100%);
+    color: #1f3127;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(36, 49, 39, 0.1);
 }
 
 .card,
