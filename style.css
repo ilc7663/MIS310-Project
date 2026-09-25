@@ -98,6 +98,18 @@ main {
     box-shadow: 0 6px 14px rgba(36, 49, 39, 0.1);
 }
 
+.content-card a {
+    color: #405a46;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
+}
+
+.content-card a:hover,
+.content-card a:focus-visible {
+    color: #1f3127;
+}
+
 .card,
 .content-card,
 .about-section {
