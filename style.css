@@ -2,16 +2,16 @@ html {
     scroll-behavior: smooth;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(180deg, #d4dad4 0%, #e9efe8 100%);
     color: #243127;
     line-height: 1.6;
-}
-
-* {
-    box-sizing: border-box;
 }
 
 .top-nav {
