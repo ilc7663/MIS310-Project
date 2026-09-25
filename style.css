@@ -110,6 +110,43 @@ main {
     color: #1f3127;
 }
 
+.sitemap-section {
+    margin-top: 24px;
+}
+
+.sitemap-section h2 {
+    margin-bottom: 12px;
+    color: #405a46;
+}
+
+.sitemap-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: grid;
+    gap: 10px;
+}
+
+.sitemap-item {
+    padding: 12px 14px;
+    background: #f5f8f5;
+    border: 1px solid #d7e1d7;
+    border-radius: 12px;
+    color: #243127;
+}
+
+.sitemap-list a {
+    color: #405a46;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.sitemap-list a:hover,
+.sitemap-list a:focus-visible {
+    color: #1f3127;
+    text-decoration: underline;
+}
+
 .card,
 .content-card,
 .about-section {
