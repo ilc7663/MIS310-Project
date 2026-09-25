@@ -286,7 +286,7 @@ li {
         grid-template-columns: 1fr;
     }
 
-    nav a {
+    .top-nav a {
         margin: 4px 4px;
         padding: 6px 10px;
     }
