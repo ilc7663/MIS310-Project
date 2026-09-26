@@ -128,18 +128,22 @@ main {
 }
 
 .sitemap-item {
-    padding: 12px 14px;
+    padding: 0;
     background: linear-gradient(180deg, #f8fbf8 0%, #eef5ef 100%);
     border: 1px solid #d7e1d7;
     border-radius: 12px;
     color: #243127;
     box-shadow: 0 4px 10px rgba(36, 49, 39, 0.04);
+    overflow: hidden;
 }
 
 .sitemap-list a {
+    display: block;
+    padding: 12px 14px;
     color: #405a46;
     text-decoration: none;
     font-weight: 700;
+    border-radius: 12px;
 }
 
 .sitemap-list a:hover,
