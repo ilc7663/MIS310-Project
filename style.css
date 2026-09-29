@@ -144,12 +144,17 @@ main {
     text-decoration: none;
     font-weight: 700;
     border-radius: 12px;
+    border-left: 4px solid transparent;
+    transition: background 0.2s ease, border-color 0.2s ease, padding-left 0.2s ease;
 }
 
 .sitemap-list a:hover,
 .sitemap-list a:focus-visible {
     color: #1f3127;
     text-decoration: underline;
+    background: #e6f0e7;
+    border-left-color: #7c9f80;
+    padding-left: 18px;
 }
 
 .card,
