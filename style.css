@@ -157,6 +157,29 @@ main {
     padding-left: 18px;
 }
 
+.sitemap-guide {
+    gap: 0;
+}
+
+.sitemap-guide .sitemap-item {
+    padding: 12px 0;
+    background: none;
+    border: 0;
+    border-bottom: 1px solid #d7e1d7;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+}
+
+.sitemap-guide .sitemap-item:last-child {
+    border-bottom: 0;
+}
+
+.sitemap-guide strong {
+    display: block;
+    color: #405a46;
+}
+
 .card,
 .content-card,
 .about-section {
