@@ -188,14 +188,14 @@ main {
     gap: 14px;
     padding: 28px 30px;
     margin-bottom: 25px;
-    background: #ffffff;
+    background: linear-gradient(180deg, #ffffff 0%, #f8faf8 100%);
     border: 1px solid #c9d8ca;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(36, 49, 39, 0.08);
+    border-radius: 18px;
+    box-shadow: 0 12px 26px rgba(36, 49, 39, 0.06);
 }
 
 .card:first-child {
-    background: #eaf2ea;
+    background: linear-gradient(180deg, #edf4ee 0%, #f4f9f4 100%);
 }
 
 .content-card h1,
@@ -234,11 +234,14 @@ main {
 .footprint-image {
     display: block;
     width: 100%;
-    max-width: 500px;
+    max-width: 620px;
     height: auto;
-    margin: 0 auto 20px;
-    border-radius: 12px;
-    border: 1px solid #d9e3d9;
+    margin: 0 auto 8px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #dfe8df;
+    background: linear-gradient(180deg, #f9f7f3 0%, #f1f6f1 100%);
+    box-shadow: 0 16px 30px rgba(36, 49, 39, 0.08);
 }
 
 .footprint-comparison {
@@ -356,8 +359,14 @@ li {
         padding: 20px 18px;
     }
 
+    .footprint-image {
+        max-width: 100%;
+        padding: 8px;
+        border-radius: 16px;
+    }
+
     .footprint-comparison {
-        grid-template-columns: 1fr;
+        flex-direction: column;
     }
 
     .top-nav a {
