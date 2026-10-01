@@ -215,6 +215,16 @@ h3 {
     font-size: 1.15rem;
 }
 
+.hero-image {
+    display: block;
+    width: 100%;
+    height: 280px;
+    margin: -8px 0 10px;
+    object-fit: cover;
+    border: 1px solid #d9e3d9;
+    border-radius: 6px;
+}
+
 .cta-button {
     display: inline-block;
     width: fit-content;
@@ -247,6 +257,24 @@ h3 {
     border: 1px solid #d9e3d9;
     border-radius: 8px;
     background: #f9f7f1;
+}
+
+.comparison-image,
+.education-image {
+    display: block;
+    width: 100%;
+    max-width: 720px;
+    height: 250px;
+    margin: 0 0 24px;
+    object-fit: cover;
+    border: 1px solid #d9e3d9;
+    border-radius: 6px;
+}
+
+.education-image {
+    max-width: 680px;
+    height: 230px;
+    margin-top: 8px;
 }
 
 .image-gallery {
@@ -423,6 +451,13 @@ li {
     .footprint-image {
         max-width: 100%;
         padding: 6px;
+    }
+
+    .hero-image,
+    .comparison-image,
+    .education-image {
+        height: auto;
+        max-height: 240px;
     }
 
     .image-gallery {
