@@ -471,8 +471,8 @@ li {
     .hero-image,
     .comparison-image,
     .education-image {
-        height: auto;
-        max-height: 240px;
+        height: 230px;
+        max-height: none;
     }
 
     .image-gallery {
