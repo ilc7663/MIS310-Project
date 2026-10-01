@@ -181,19 +181,16 @@ main {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding: 46px 0;
-    margin-bottom: 0;
-    background: transparent;
-    border: 0;
-    border-top: 1px solid var(--line);
-    border-radius: 0;
-    box-shadow: none;
+    padding: 32px;
+    margin-bottom: 25px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    box-shadow: 0 10px 26px rgba(36, 49, 39, 0.07);
 }
 
 .card:first-child {
-    padding-top: 0;
-    background: transparent;
-    border-top: 0;
+    background: linear-gradient(180deg, #eaf2ea 0%, #f4f9f4 100%);
 }
 
 .content-card h1,
@@ -250,6 +247,22 @@ h3 {
     border: 1px solid #d9e3d9;
     border-radius: 8px;
     background: #f9f7f1;
+}
+
+.image-gallery {
+    display: flex;
+    align-items: stretch;
+    gap: 14px;
+    margin-bottom: 8px;
+}
+
+.image-gallery .footprint-image {
+    flex: 1 1 0;
+    width: 0;
+    max-width: none;
+    height: 190px;
+    margin: 0;
+    object-fit: cover;
 }
 
 .footprint-comparison {
@@ -410,6 +423,16 @@ li {
     .footprint-image {
         max-width: 100%;
         padding: 6px;
+    }
+
+    .image-gallery {
+        flex-direction: column;
+    }
+
+    .image-gallery .footprint-image {
+        width: 100%;
+        height: auto;
+        max-height: 240px;
     }
 
     .footprint-comparison {
