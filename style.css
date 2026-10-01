@@ -282,6 +282,23 @@ h3 {
     background: #f9f7f1;
 }
 
+.hero-image {
+    width: 100% !important;
+    height: 330px !important;
+}
+
+.comparison-image {
+    width: 100% !important;
+    max-width: 820px !important;
+    height: 300px !important;
+}
+
+.education-image {
+    width: 100% !important;
+    max-width: 760px !important;
+    height: 280px !important;
+}
+
 .image-gallery {
     display: flex;
     align-items: stretch;
@@ -471,7 +488,7 @@ li {
     .hero-image,
     .comparison-image,
     .education-image {
-        height: 230px;
+        height: 230px !important;
         max-height: none;
     }
 
