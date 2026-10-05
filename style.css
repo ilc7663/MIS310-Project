@@ -225,6 +225,71 @@ h3 {
     border-radius: 6px;
 }
 
+.hero {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    max-width: none;
+    min-height: min(78vh, 760px);
+    margin: -82px calc(50% - 50vw) 64px;
+    padding: 4rem 8%;
+    overflow: hidden;
+    color: #f7faf7;
+    background: #243127;
+}
+
+.hero::after {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(15, 24, 18, 0.84), rgba(15, 24, 18, 0.62) 42%, rgba(15, 24, 18, 0.12));
+    content: "";
+}
+
+.hero-backdrop {
+    position: absolute;
+    z-index: -2;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    animation: hero-drift 24s ease-in-out infinite alternate;
+}
+
+.hero-text {
+    position: relative;
+    max-width: 650px;
+    color: #f7faf7;
+}
+
+.hero-text h1 {
+    max-width: 16ch;
+    margin: 0 0 1rem;
+    color: inherit;
+    font-size: 3.25rem;
+    line-height: 1.05;
+}
+
+.hero-text p {
+    max-width: 48ch;
+    margin: 0 0 1.5rem;
+    font-size: 1.15rem;
+}
+
+@keyframes hero-drift {
+    from { transform: scale(1.04) translateX(0); }
+    to { transform: scale(1.12) translateX(-1%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-backdrop {
+        animation: none;
+    }
+}
+
 .cta-button {
     display: inline-block;
     width: fit-content;
@@ -495,5 +560,17 @@ li {
 
     .footprint-comparison {
         grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 72vh;
+        min-height: 72svh;
+        margin-top: -42px;
+        padding: 3rem 7%;
+    }
+
+    .hero-text h1 {
+        max-width: 14ch;
+        font-size: 2.25rem;
     }
 }
