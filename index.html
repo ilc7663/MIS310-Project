@@ -5,8 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Understanding Your Digital Footprint</title>
         <link rel="stylesheet" href="style.css" />
+        <script>document.documentElement.classList.add("js");</script>
     </head>
-    <body id="top">
+    <body id="top" class="home-page">
         <nav class="top-nav">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
@@ -17,24 +18,39 @@
         <main>
             <section class="hero">
                 <img class="hero-backdrop" src="images/digital-footprint-hero-background.png" alt="">
-                <div class="hero-text">
+                <div class="hero-text" data-reveal>
+                    <p class="section-index">A GUIDE TO YOUR ONLINE PRESENCE</p>
                     <h1>Understanding Your Digital Footprint</h1>
                     <p>Your online activity creates a lasting picture of who you are. Learn what shapes it and how to manage it.</p>
-                    <a class="cta-button" href="education.html">Learn About Digital Footprints</a>
+                    <div class="hero-actions">
+                        <a class="cta-button" href="education.html">Learn About Digital Footprints</a>
+                        <a class="cta-button cta-secondary" href="#why-it-matters">Why It Matters</a>
+                    </div>
                 </div>
             </section>
 
-            <div class="card info-section">
-                <h2>Why Does Your Digital Footprint Matter?</h2>
-                <p>Every time you post, comment, search, shop, or create an account online, you may leave behind information about yourself. Some of this information is shared intentionally, while some may be collected in the background. Over time, these pieces of information can become part of your digital identity.</p>
-                <p>For college students, understanding this matters because your online presence can become relevant when you apply for internships, jobs, graduate programs, or other professional opportunities.</p>
-            </div>
+            <section class="info-section" id="why-it-matters" data-reveal>
+                <div>
+                    <p class="section-index">01 / WHY IT MATTERS</p>
+                    <h2>Why Does Your Digital Footprint Matter?</h2>
+                </div>
+                <div class="info-copy">
+                    <p>Every time you post, comment, search, shop, or create an account online, you may leave behind information about yourself. Some of this information is shared intentionally, while some may be collected in the background. Over time, these pieces of information can become part of your digital identity.</p>
+                    <p>For college students, understanding this matters because your online presence can become relevant when you apply for internships, jobs, graduate programs, or other professional opportunities.</p>
+                </div>
+            </section>
 
-            <section aria-labelledby="footprint-types-heading">
-                <img class="comparison-image" src="images/pointing.png" alt="Person pointing toward digital information">
-                <h2 id="footprint-types-heading">Active vs. Passive</h2>
+            <section class="footprint-section" aria-labelledby="footprint-types-heading">
+                <div class="footprint-intro" data-reveal>
+                    <div class="footprint-intro-copy">
+                        <p class="section-index">02 / TWO SIDES OF YOUR ONLINE PRESENCE</p>
+                        <h2 id="footprint-types-heading">Active vs. Passive</h2>
+                        <p>There are two common ways to think about a digital footprint: active and passive.</p>
+                    </div>
+                    <img class="comparison-image" src="images/pointing.png" alt="Person pointing toward digital information">
+                </div>
                 <div class="footprint-comparison">
-                    <article class="card footprint-card">
+                    <article class="card footprint-card" data-reveal>
                         <div class="card-icon" aria-hidden="true">
                             <svg viewBox="0 0 640 512" fill="currentColor"><path d="M576 48c0-8.3-4.3-16-11.3-20.4s-15.9-4.8-23.3-1.1L416.5 88.1 244 29.4c-13.7-4.7-28.7-3.8-41.9 2.3L77.8 90.3C69.4 94.2 64 102.7 64 112l0 352c0 8.2 4.2 15.9 11.1 20.3s15.6 4.9 23.1 1.4l127.3-59.9 167.3 55.8c-1.9-3-3.8-6-5.6-9.1l-104.9-35 0-301.1 128 43.5 0 106.7c13.4-15.6 29.7-28.6 48-38.4l0-62 96-47.4 0 90.1c16.8 1.6 32.9 5.6 48 11.7L576 48zM208 82.1l0 299-96 45.2 0-299 96-45.2z"></path></svg>
                         </div>
@@ -50,7 +66,7 @@
                         <a class="card-link" href="education.html">Learn More <span aria-hidden="true">&rarr;</span></a>
                     </article>
 
-                    <article class="card footprint-card">
+                    <article class="card footprint-card" data-reveal>
                         <div class="card-icon" aria-hidden="true">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 4.5 6v5.5c0 4.5 3.1 7.7 7.5 9.5 4.4-1.8 7.5-5 7.5-9.5V6L12 3Z"></path><path d="m8.5 12 2.2 2.2 4.8-4.8"></path></svg>
                         </div>
@@ -76,5 +92,23 @@
             <a class="footer-link" href="sitemap.html">HTML Sitemap</a>
             <a class="footer-link" href="#top">Back to top</a>
         </footer>
+        <script>
+            const revealItems = document.querySelectorAll("[data-reveal]");
+
+            if ("IntersectionObserver" in window) {
+                const revealObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("is-visible");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.15 });
+
+                revealItems.forEach((item) => revealObserver.observe(item));
+            } else {
+                revealItems.forEach((item) => item.classList.add("is-visible"));
+            }
+        </script>
     </body>
 </html>

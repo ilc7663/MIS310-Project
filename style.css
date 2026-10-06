@@ -274,17 +274,116 @@ h3 {
 }
 
 .hero-text h1 {
-    max-width: 16ch;
+    max-width: 13ch;
     margin: 0 0 1rem;
     color: inherit;
-    font-size: 3.25rem;
-    line-height: 1.05;
+    font-size: 5rem;
+    line-height: 0.98;
 }
 
 .hero-text p {
     max-width: 48ch;
     margin: 0 0 1.5rem;
     font-size: 1.15rem;
+}
+
+.home-page .section-index {
+    margin: 0 0 18px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.home-page .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+.home-page .cta-secondary {
+    border: 1px solid currentColor;
+    background: transparent;
+    color: inherit;
+}
+
+.home-page .info-section {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    align-items: start;
+    gap: 32px 60px;
+    padding: 64px 0;
+    margin: 0 0 90px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.home-page .info-section h2 {
+    max-width: 12ch;
+    margin: 0;
+    color: var(--green);
+    font-size: 3.25rem;
+    line-height: 1.05;
+}
+
+.home-page .info-copy {
+    max-width: 720px;
+    padding-top: 34px;
+}
+
+.home-page .info-copy p {
+    margin: 0 0 16px;
+    font-size: 1.1rem;
+}
+
+.home-page .footprint-section {
+    padding-bottom: 48px;
+}
+
+.home-page .footprint-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: center;
+    gap: 48px;
+    margin-bottom: 36px;
+}
+
+.home-page .footprint-intro-copy h2 {
+    max-width: 12ch;
+    margin: 0 0 18px;
+    color: var(--green);
+    font-size: 3.75rem;
+    line-height: 1;
+}
+
+.home-page .footprint-intro-copy > p:last-child {
+    max-width: 44ch;
+    font-size: 1.1rem;
+}
+
+.home-page .footprint-intro .comparison-image {
+    height: 360px;
+    margin: 0;
+}
+
+.home-page .footprint-card h3 {
+    font-size: 2rem;
+}
+
+.js [data-reveal] {
+    opacity: 0;
+    transition: opacity 700ms ease;
+}
+
+.js [data-reveal].is-visible {
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .js [data-reveal] {
+        opacity: 1;
+        transition: none;
+    }
 }
 
 @keyframes hero-drift {
@@ -578,7 +677,36 @@ li {
     }
 
     .hero-text h1 {
-        max-width: 14ch;
-        font-size: 2.25rem;
+        max-width: 12ch;
+        font-size: 2.75rem;
+    }
+
+    .home-page .info-section {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 42px 0;
+        margin-bottom: 60px;
+    }
+
+    .home-page .info-section h2 {
+        max-width: 16ch;
+        font-size: 2.5rem;
+    }
+
+    .home-page .info-copy {
+        padding-top: 0;
+    }
+
+    .home-page .footprint-intro {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .home-page .footprint-intro-copy h2 {
+        font-size: 2.75rem;
+    }
+
+    .home-page .footprint-intro .comparison-image {
+        height: 260px;
     }
 }
