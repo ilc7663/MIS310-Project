@@ -300,9 +300,34 @@ h3 {
     transform: translateX(-50%);
 }
 
+.scroll-ind span {
+    position: absolute;
+    top: 0;
+    left: -1px;
+    width: 3px;
+    height: 10px;
+    background: currentColor;
+    animation: scroll-ind-travel 1.6s ease-in-out infinite;
+}
+
+@keyframes scroll-ind-travel {
+    0% { transform: translateY(0); opacity: 0; }
+    18% { opacity: 1; }
+    82% { opacity: 1; }
+    100% { transform: translateY(34px); opacity: 0; }
+}
+
 .scroll-ind:focus-visible {
     outline: 2px solid currentColor;
     outline-offset: 5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-ind span {
+        top: 17px;
+        animation: none;
+        opacity: 1;
+    }
 }
 
 .home-page .section-index {
