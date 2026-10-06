@@ -389,6 +389,7 @@ h3 {
     background-image: url("images/digital-footprint-studio-background.png");
     background-size: cover;
     background-position: 50% 50%;
+    background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
@@ -455,6 +456,24 @@ h3 {
     font-family: "JetBrains Mono", "JetBrains Mono Fallback", ui-monospace, "SF Mono", Menlo, monospace;
     font-size: 0.8rem;
     opacity: 0.68;
+}
+
+.about-learning-list a {
+    color: var(--ink);
+    text-decoration-color: var(--line);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.about-learning-list a:hover,
+.about-learning-list a:focus-visible {
+    color: var(--green);
+    text-decoration-color: currentColor;
+}
+
+h2[id],
+h3[id] {
+    scroll-margin-top: 100px;
 }
 
 .about-close {
