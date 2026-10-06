@@ -388,7 +388,8 @@ h3 {
     isolation: isolate;
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 100vw;
+    margin: 0 calc(50% - 50vw);
     aspect-ratio: 1.19 / 1;
     padding: 56px;
     color: #f7faf7;
