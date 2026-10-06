@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Digital Footprint Education</title>
   <link rel="stylesheet" href="style.css" />
+  <script>document.documentElement.classList.add("js");</script>
 </head>
-<body id="top">
+<body id="top" class="education-page">
   <nav class="top-nav">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -16,10 +17,25 @@
   </nav>
 
   <main>
-    <div class="content-card">
-      <h1>Digital Footprint Education</h1>
+    <section class="education-hero" data-reveal>
+      <img class="education-hero-backdrop" src="images/digital-footprint-trail.png" alt="">
+      <div class="education-hero-inner">
+        <p class="section-index">A guide to your online presence</p>
+        <h1>Digital Footprint Education</h1>
+        <p class="education-lead">Your online activity creates a lasting picture of who you are. Learn what shapes it and how to manage it.</p>
+        <div class="hero-actions">
+          <a class="cta-button" href="#what-is-a-digital-footprint">Start learning</a>
+          <a class="cta-button cta-secondary" href="#how-to-manage-your-digital-footprint">How to manage it</a>
+        </div>
+      </div>
+      <a class="scroll-ind" href="#what-is-a-digital-footprint" aria-label="Scroll to Digital Footprint Education"><span aria-hidden="true"></span></a>
+    </section>
 
-      <h2 id="what-is-a-digital-footprint">What Is a Digital Footprint?</h2>
+    <div class="content-card education-section" data-reveal>
+      <div class="education-section-heading">
+        <p class="section-index">01 / why it matters</p>
+        <h2 id="what-is-a-digital-footprint">What Is a Digital Footprint?</h2>
+      </div>
       <p>Think about everything you do online in a normal day. You might check Instagram, send a text or email, shop online, search for something, watch a video, fill out a form, or log into your bank account. Each of these activities can create information about you.</p>
 
       <img class="education-image" src="images/digital-footprint-trail.png" alt="Person walking along a trail of digital information">
@@ -28,140 +44,103 @@
       <p>Your digital footprint can include social media posts, photos, comments, emails, online purchases, account information, website visits, and other data connected to your online activity. It can also include information that other people post about you, such as a tagged photo or a comment mentioning your name.</p>
 
       <p>The important thing to remember is that your digital footprint isn't just one thing. It's the collection of information that builds up over time as you interact with the digital world.</p>
+    </div>
 
-      <h2 id="active-and-passive-digital-footprints">Active and Passive Digital Footprints</h2>
-      <p>There are two common ways to think about a digital footprint: <strong>active</strong> and <strong>passive</strong>.</p>
-
-      <h3 id="active-digital-footprint">Active Digital Footprint</h3>
-      <p>An active digital footprint is information you intentionally put online. For example, when you post a picture on Instagram, write a comment, create a LinkedIn profile, submit an online application, or send an email, you're deliberately sharing information.</p>
-
-      <p>Because you're choosing to create this information, you generally have more control over it. That doesn't mean you have complete control over what happens to it after you post it, though. Other people can save, screenshot, share, or repost content.</p>
-
-      <p>Before posting something, it can be helpful to ask yourself:</p>
-      <p class="quote">"Would I be comfortable with this being seen by a professor, future employer, or professional contact?"</p>
-
-      <p>You don't have to treat every social media post like a job application, but taking a moment to think before posting can prevent problems later.</p>
-
-      <h3>Passive Digital Footprint</h3>
-      <p>A passive digital footprint is information collected about you as you use websites, apps, and other online services, sometimes without you actively providing it.</p>
-
-      <p>For example, websites may record information about visits, use cookies or other tracking technologies, or collect information related to your device and location. Online shopping and browsing activity can also contribute to the information associated with your digital profile.</p>
-
-      <p>This can make passive footprints harder to notice because you aren't necessarily sitting down and deciding, "I'm going to create this information." Instead, some of it is generated as a normal part of using an online service.</p>
-
-      <p>Understanding passive data is important because it reminds us that managing our digital footprint isn't only about what we post. It's also about paying attention to privacy settings, app permissions, cookies, and the information we agree to share.</p>
-
-      <h2>Facts About Your Digital Footprint</h2>
-
-      <h3>1. Your Online Information Can Be Difficult to Completely Remove</h3>
-      <p>One of the biggest misconceptions about the internet is that deleting something means it is completely gone.</p>
-      <p>If you delete a social media post, you may no longer see it on your profile, but someone could have already taken a screenshot, downloaded it, or shared it somewhere else. Some information may also have been stored or copied by other services.</p>
-      <p>This doesn't mean that everything you post will exist forever or that you should be afraid to use the internet. It simply means that you should think about the possible consequences before sharing something publicly. The FTC recommends considering who might see your content because even temporary posts can be saved or shared by others.</p>
-
-      <h3>2. Your Digital Footprint Can Be Traced</h3>
-      <p>A lot of activity happens behind the scenes when you use the internet. Websites and online services can collect information related to your visits, devices, location, and interactions.</p>
-
-      <p>For example, websites may use cookies and other tracking technologies to remember activity or understand how people use their services. Depending on the service and its privacy practices, information may also be shared with third parties.</p>
-
-      <p>This is one reason privacy settings matter. You may not be able to completely eliminate your digital footprint, but you can make informed choices about the information you share and the permissions you give apps and websites.</p>
-
-      <h3 id="digital-footprint-security-risks">3. Your Digital Footprint Can Create Security Risks</h3>
-      <p>The information you leave online can sometimes make you an easier target for scams, phishing, identity theft, or account attacks.</p>
-
-      <p>For example, publicly sharing your full name, birthday, school, hometown, pet's name, or other personal details can give attackers information they may use to make a scam or phishing message seem more convincing.</p>
-
-      <p>Your accounts are also at risk if you reuse passwords or don't have additional security measures enabled. The National Institute of Standards and Technology (NIST) recommends using multifactor authentication because it provides an additional layer of protection if a password is compromised.</p>
-
-      <p>Simple steps such as using unique passwords, enabling multifactor authentication, keeping software updated, and being cautious about suspicious links can make a significant difference.</p>
-
-      <h3>4. Your Online Activity Can Be Used for Advertising</h3>
-      <p>Have you ever searched for a product and then started seeing advertisements for similar products afterward?</p>
-
-      <p>Online companies can collect information about how people interact with websites and services. Depending on the platform and its privacy practices, information about browsing, shopping, interests, and interactions may be used to personalize advertising or content.</p>
-
-      <p>This is one reason it's useful to understand privacy settings and tracking technologies. Convenience can be helpful, but it's also worth knowing what information you're sharing in exchange for that convenience.</p>
-
-      <h3>5. Your Digital Footprint Can Contribute to Identity Theft Risks</h3>
-      <p>Your digital footprint can contain pieces of personal information that, when combined, may become useful to criminals.</p>
-
-      <p>Attackers can use stolen or publicly available information in attempts to impersonate someone, create convincing phishing messages, access accounts, or commit fraud. Data breaches can make this problem even more serious because information can be exposed without the victim intentionally sharing it publicly.</p>
-
-      <p>You can reduce your risk by limiting the amount of personal information you publicly share, using strong and unique passwords, turning on multifactor authentication, and keeping an eye on your accounts.</p>
-
-      <h2>How Your Digital Footprint Can Affect Your Future</h2>
-      <p>Your digital footprint isn't only a cybersecurity issue. It can also become part of your professional identity.</p>
-
-      <p>When you're in college, you're building more than a degree. You're also building a reputation, making professional connections, applying for internships, and preparing for your career. Your online presence can become part of that process.</p>
-
-      <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/Ro_LlRg8rGg" title="Digital Footprint video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <section class="education-section education-section-alt" id="active-and-passive-digital-footprints" data-reveal>
+      <div class="education-section-heading">
+        <p class="section-index">02 / two sides of your online presence</p>
+        <h2>Active and Passive Digital Footprints</h2>
+        <p>There are two common ways to think about a digital footprint: <strong>active</strong> and <strong>passive</strong>.</p>
       </div>
+      <div class="education-type-grid">
+        <article class="card education-card" data-reveal>
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 640 512" fill="currentColor"><path d="M576 48c0-8.3-4.3-16-11.3-20.4s-15.9-4.8-23.3-1.1L416.5 88.1 244 29.4c-13.7-4.7-28.7-3.8-41.9 2.3L77.8 90.3C69.4 94.2 64 102.7 64 112l0 352c0 8.2 4.2 15.9 11.1 20.3s15.6 4.9 23.1 1.4l127.3-59.9 167.3 55.8c-1.9-3-3.8-6-5.6-9.1l-104.9-35 0-301.1 128 43.5 0 106.7c13.4-15.6 29.7-28.6 48-38.4l0-62 96-47.4 0 90.1c16.8 1.6 32.9 5.6 48 11.7L576 48zM208 82.1l0 299-96 45.2 0-299 96-45.2z"></path></svg></div>
+          <h3 id="active-digital-footprint">Active</h3>
+          <p>Information you intentionally share online.</p>
+          <ul>
+            <li>Social media posts</li>
+            <li>Comments</li>
+            <li>Online forms</li>
+            <li>Emails</li>
+            <li>Photos and videos</li>
+          </ul>
+          <p class="education-card-copy">An active digital footprint is information you deliberately put online. Before posting, ask whether you would be comfortable with a professor, employer, or professional contact seeing it.</p>
+        </article>
+        <article class="card education-card education-card-alt" data-reveal>
+          <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 4.5 6v5.5c0 4.5 3.1 7.7 7.5 9.5 4.4-1.8 7.5-5 7.5-9.5V6L12 3Z"></path><path d="m8.5 12 2.2 2.2 4.8-4.8"></path></svg></div>
+          <h3>Passive</h3>
+          <p>Information collected through your online activity.</p>
+          <ul>
+            <li>Browsing history</li>
+            <li>Website visits</li>
+            <li>Cookies and trackers</li>
+            <li>Location data</li>
+            <li>Device information</li>
+          </ul>
+          <p class="education-card-copy">A passive digital footprint is generated as you use websites and apps. Privacy settings, cookies, and app permissions help control what can be collected.</p>
+        </article>
+      </div>
+    </section>
 
-      <h3 id="employment-opportunities">Employment Opportunities</h3>
-      <p>Employers may look at information that is publicly available online when evaluating potential applicants. Social media and other online information can give employers another impression of a candidate outside of a résumé or interview. Research has found that employers have used internet and social media information as part of their evaluation of job applicants.</p>
+    <section class="education-facts" data-reveal>
+      <div class="education-section-heading">
+        <p class="section-index">03 / key facts</p>
+        <h2>Facts About Your Digital Footprint</h2>
+      </div>
+      <ol class="education-facts-list">
+        <li><h3>Your information can be difficult to completely remove</h3><p>If you delete a social media post, it may already have been saved, downloaded, or shared elsewhere.</p></li>
+        <li><h3>Your digital footprint can be traced</h3><p>Websites and online services can collect information about visits, devices, location, and interactions.</p></li>
+        <li id="digital-footprint-security-risks"><h3>Your online activity can create security risks</h3><p>Public personal details can make scams, phishing, and account attacks more convincing.</p></li>
+        <li><h3>Your activity can be used for advertising</h3><p>Browsing and shopping information may be used to personalize content and advertisements.</p></li>
+        <li><h3>Your digital footprint can contribute to identity theft risks</h3><p>Combined personal details can be used to impersonate someone or attempt fraud.</p></li>
+      </ol>
+    </section>
 
-      <p>That doesn't mean an employer will automatically reject someone because of one old picture or post. Hiring decisions are more complicated than that. However, it does mean that it's worth being aware of what someone could find if they searched your name.</p>
+    <section class="education-future" data-reveal>
+      <div class="education-section-heading">
+        <p class="section-index">04 / your future</p>
+        <h2>How Your Digital Footprint Can Affect Your Future</h2>
+      </div>
+      <div class="education-future-grid">
+        <div class="education-future-copy">
+          <p>Your digital footprint isn't only a cybersecurity issue. It can also become part of your professional identity.</p>
+          <p>When you're in college, you're building more than a degree. You're also building a reputation, making professional connections, applying for internships, and preparing for your career.</p>
+          <p>Your online presence can become part of that process. A quick search of your name can help you understand what others might see.</p>
+        </div>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/Ro_LlRg8rGg" title="Digital Footprint video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="education-impact-grid">
+        <article class="education-impact" data-reveal>
+          <h3 id="employment-opportunities">Employment Opportunities</h3>
+          <p>Employers may consider publicly available information when evaluating applicants. Search your name and review what appears.</p>
+        </article>
+        <article class="education-impact" data-reveal>
+          <h3>Networking and Career Growth</h3>
+          <p>A thoughtful LinkedIn profile, portfolio, or professional contribution can help show what you can do.</p>
+        </article>
+        <article class="education-impact" data-reveal>
+          <h3>Your Personal Reputation</h3>
+          <p>Friends, classmates, professors, organizations, and employers may see content that was meant for a smaller audience.</p>
+        </article>
+      </div>
+    </section>
 
-      <p>A quick Google search of yourself can be a good starting point. Look at what appears publicly and ask yourself whether the information represents how you want to be seen professionally.</p>
-
-      <h3>Networking and Career Growth</h3>
-      <p>Your digital footprint can also work <strong>in your favor</strong>.</p>
-
-      <p>A professional LinkedIn profile, portfolio, personal website, research project, volunteer experience, or thoughtful contribution to an online professional community can help show what you're interested in and what you can do.</p>
-
-      <p>Instead of thinking about your digital footprint as something you need to hide, think about it as something you can build.</p>
-
-      <p>For example, a cybersecurity student might create a portfolio, share a cybersecurity project, participate in professional discussions, or document certifications and skills. These activities can create a more positive and intentional online presence.</p>
-
-      <h3>Your Personal Reputation</h3>
-      <p>Your digital footprint can affect more than your career.</p>
-
-      <p>Friends, classmates, professors, organizations, and other people may come across information about you online. A post that seems funny in the moment may look very different when taken out of context later.</p>
-
-      <p>The FTC points out that photos, videos, and messages shared online can affect privacy and reputation, and that people who see your content may be able to save or share it.</p>
-
-      <p>This doesn't mean you need to be perfect online. Everyone makes mistakes. The goal is to become more aware of what you're sharing and understand that online content can sometimes reach a much larger audience than you originally expected.</p>
-
-      <h2 id="how-to-manage-your-digital-footprint">How to Manage Your Digital Footprint</h2>
-      <p>Managing your digital footprint isn't about becoming invisible online. It's about being more intentional.</p>
-
-      <h3>Search Your Name</h3>
-      <p>Start by searching your name online. Look at Google and your social media profiles and see what information is publicly available.</p>
-
-      <p>If you have a common name, you may need to include additional information such as your school, city, or field of study.</p>
-
-      <h3>Review Your Social Media</h3>
-      <p>Go through your social media accounts and look at older posts, photos, comments, and tagged content.</p>
-
-      <p>Ask yourself:</p>
-      <ul>
-        <li>Is this something I still want publicly available?</li>
-        <li>Does this represent me today?</li>
-        <li>Is there personal information that I don't need to share?</li>
-        <li>Are there old accounts I no longer use?</li>
-      </ul>
-      <p>You don't have to delete everything. The goal is simply to understand what is out there.</p>
-
-      <h3>Check Your Privacy Settings</h3>
-      <p>Review the privacy settings on your social media accounts, apps, and other services.</p>
-
-      <p>Remember that privacy settings aren't a guarantee that information can never be shared. Someone else may still screenshot or repost something you publish.</p>
-
-      <h3>Protect Your Accounts</h3>
-      <p>Use strong, unique passwords and turn on multifactor authentication whenever it is available. NIST recommends multifactor authentication as an important additional layer of account protection.</p>
-
-      <h3>Think Before You Post</h3>
-      <p>Before posting something, take a few seconds to think about the possible audience and consequences.</p>
-
-      <p>A simple question to ask is:</p>
-      <p class="quote">"Would I be okay with this being seen outside of the audience I intended?"</p>
-
-      <p>If the answer is no, it may be worth reconsidering the post.</p>
-
-      <h3>Build a Positive Online Presence</h3>
-      <p>Managing your digital footprint isn't only about removing negative information. You can also add positive information.</p>
-
-      <p>Create profiles that highlight your education, interests, skills, projects, volunteer work, and career goals. For college students, this can be a great way to start building a professional identity before entering the workforce.</p>
+    <section class="education-manage" id="how-to-manage-your-digital-footprint" data-reveal>
+      <div class="education-section-heading">
+        <p class="section-index">05 / manage it</p>
+        <h2>How to Manage Your Digital Footprint</h2>
+      </div>
+      <div class="education-manage-grid">
+        <article class="education-step" data-reveal><h3>Search Your Name</h3><p>Look at Google and your social media profiles to see what information is publicly available.</p></article>
+        <article class="education-step" data-reveal><h3>Review Your Social Media</h3><p>Examine older posts, photos, comments, and tagged content to decide what you still want public.</p></article>
+        <article class="education-step" data-reveal><h3>Check Your Privacy Settings</h3><p>Review account settings, app permissions, and cookies to limit unnecessary data collection.</p></article>
+        <article class="education-step" data-reveal><h3>Protect Your Accounts</h3><p>Use strong, unique passwords and enable multifactor authentication whenever possible.</p></article>
+        <article class="education-step" data-reveal><h3>Think Before You Post</h3><p>Ask whether you would be comfortable with the content being seen outside its original audience.</p></article>
+        <article class="education-step" data-reveal><h3>Build a Positive Online Presence</h3><p>Add professional profiles, projects, volunteer work, and other information that reflects your goals.</p></article>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -169,5 +148,23 @@
     <a class="footer-link" href="sitemap.html">HTML Sitemap</a>
     <a class="footer-link" href="#top">Back to top</a>
   </footer>
+  <script>
+    const revealItems = document.querySelectorAll("[data-reveal]");
+
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      revealItems.forEach((item) => revealObserver.observe(item));
+    } else {
+      revealItems.forEach((item) => item.classList.add("is-visible"));
+    }
+  </script>
 </body>
 </html>
