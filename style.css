@@ -161,7 +161,7 @@ main {
 }
 
 .sitemap-guide .sitemap-item {
-    padding: 15px 0;
+    padding: 0;
     border-bottom: 1px solid var(--line);
     border-top: 0;
 }
