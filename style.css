@@ -287,6 +287,38 @@ h3 {
     font-size: 1.15rem;
 }
 
+.scroll-ind {
+    position: absolute;
+    right: 8%;
+    bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #f7faf7;
+    font-family: "JetBrains Mono", "JetBrains Mono Fallback", ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.72rem;
+    text-decoration: none;
+    opacity: 0.72;
+}
+
+.scroll-ind span {
+    width: 36px;
+    height: 1px;
+    background: currentColor;
+    transform-origin: left;
+    animation: scroll-ind-pulse 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes scroll-ind-pulse {
+    to { transform: scaleX(0.4); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-ind span {
+        animation: none;
+    }
+}
+
 .home-page .section-index {
     margin: 0 0 18px;
     font-family: "JetBrains Mono", "JetBrains Mono Fallback", ui-monospace, "SF Mono", Menlo, monospace;
