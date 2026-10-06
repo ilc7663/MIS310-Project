@@ -329,6 +329,16 @@ h3 {
     font-size: 1.2rem;
 }
 
+.about-banner-image {
+    display: block;
+    width: 100%;
+    height: clamp(250px, 36vw, 420px);
+    margin-top: 40px;
+    border: 1px solid var(--line);
+    object-fit: cover;
+    object-position: center;
+}
+
 .about-ribbon {
     display: flex;
     justify-content: space-between;
@@ -907,6 +917,11 @@ li {
 
     .about-hero h1 {
         font-size: 2.75rem;
+    }
+
+    .about-banner-image {
+        height: 220px;
+        margin-top: 28px;
     }
 
     .about-ribbon {
