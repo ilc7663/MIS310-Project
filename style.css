@@ -383,6 +383,15 @@ h3 {
     border-bottom: 1px solid var(--line);
 }
 
+.studio-image {
+    width: 100%;
+    aspect-ratio: 1.19 / 1;
+    background-image: url("images/digital-footprint-studio-background.png");
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
 .about-section-heading h2,
 .about-close h2 {
     max-width: 14ch;
