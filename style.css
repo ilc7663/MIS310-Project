@@ -292,11 +292,25 @@ h3 {
 }
 
 .about-hero {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
     width: 100vw;
+    min-height: min(78vh, 760px);
     margin: -82px calc(50% - 50vw) 0;
     padding: 112px 6% 104px;
+    overflow: hidden;
     background: var(--green);
     color: #f7faf7;
+}
+
+.about-hero::after {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(15, 24, 18, 0.66), rgba(15, 24, 18, 0.36) 62%, rgba(15, 24, 18, 0.18));
+    content: "";
 }
 
 .about-hero-inner,
@@ -304,6 +318,11 @@ h3 {
     width: 100%;
     max-width: 1180px;
     margin: 0 auto;
+}
+
+.about-hero-inner {
+    position: relative;
+    z-index: 1;
 }
 
 .about-eyebrow {
@@ -330,13 +349,14 @@ h3 {
 }
 
 .about-banner-image {
-    display: block;
+    position: absolute;
+    z-index: -2;
+    inset: 0;
     width: 100%;
-    height: clamp(250px, 36vw, 420px);
-    margin-top: 40px;
-    border: 1px solid var(--line);
+    height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: center 42%;
+    animation: hero-drift 24s ease-in-out infinite alternate;
 }
 
 .about-ribbon {
@@ -621,7 +641,8 @@ h3 {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .hero-backdrop {
+    .hero-backdrop,
+    .about-banner-image {
         animation: none;
     }
 }
@@ -911,17 +932,14 @@ li {
     }
 
     .about-hero {
+        min-height: 72vh;
+        min-height: 72svh;
         margin-top: -42px;
-        padding: 72px 7% 64px;
+        padding: 72px 7%;
     }
 
     .about-hero h1 {
         font-size: 2.75rem;
-    }
-
-    .about-banner-image {
-        height: 220px;
-        margin-top: 28px;
     }
 
     .about-ribbon {
