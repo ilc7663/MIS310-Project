@@ -1333,7 +1333,7 @@ li {
     margin-bottom: 6px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     main {
         width: 92%;
         padding: 42px 0 56px;
