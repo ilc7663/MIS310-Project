@@ -321,6 +321,9 @@ main {
     counter-reset: education-fact;
 }
 
+.education-facts-list li > p {
+    grid-column: 2;
+}
 .education-facts-list li {
     display: grid;
     grid-template-columns: 42px minmax(0, 1fr);
