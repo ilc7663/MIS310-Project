@@ -313,8 +313,8 @@ main {
 
 .education-facts-list {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 20px 28px;
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: 24px 32px;
     margin: 40px 0 0;
     padding: 0;
     list-style: none;
@@ -323,14 +323,12 @@ main {
 
 .education-facts-list li {
     display: grid;
-    grid-template-columns: 34px minmax(0, 1fr);
-    gap: 12px;
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 16px;
     align-items: start;
     min-width: 0;
-    padding: 22px 20px;
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    background: var(--panel);
+    padding: 0 0 24px;
+    border-top: 1px solid var(--line);
     counter-increment: education-fact;
     box-sizing: border-box;
 }
@@ -350,12 +348,15 @@ main {
 .education-impact h3 {
     margin: 0 0 8px;
     color: var(--green);
-    font-size: 1.35rem;
-    line-height: 1.25;
+    font-size: clamp(1.2rem, 2vw, 1.35rem);
+    line-height: 1.35;
+    overflow-wrap: anywhere;
 }
 
 .education-facts-list p {
     margin: 0;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
 }
 
 .education-future-grid {
