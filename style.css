@@ -861,7 +861,6 @@ h3 {
 .about-learning-list a:hover,
 .about-learning-list a:focus-visible {
     color: var(--green);
-    text-decoration-color: currentColor;
 }
 
 h2[id],
