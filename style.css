@@ -855,9 +855,7 @@ h3 {
 
 .about-learning-list a {
     color: var(--ink);
-    text-decoration-color: var(--line);
-    text-decoration-thickness: 1px;
-    text-underline-offset: 3px;
+    text-decoration: none;
 }
 
 .about-learning-list a:hover,
