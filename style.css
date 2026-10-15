@@ -742,7 +742,33 @@ h3 {
     font-size: 0.72rem;
     opacity: 0.78;
 }
+.ticker {
+  overflow: hidden;
+  white-space: nowrap;
+}
 
+.ticker__track {
+  display: flex;
+  width: max-content;
+  animation: ticker-scroll 20s linear infinite;
+}
+
+.ticker__track span {
+  min-width: 100vw;
+  width: max-content;
+}
+
+@keyframes ticker-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker__track {
+    animation: none;
+  }
+}
 .about-slice {
     display: grid;
     grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
