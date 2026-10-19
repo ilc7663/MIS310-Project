@@ -977,6 +977,10 @@ h3[id] {
     text-transform: uppercase;
 }
 
+.home-page .hero {
+    margin-bottom: 0;
+}
+
 .home-page .hero-actions {
     display: flex;
     flex-wrap: wrap;
