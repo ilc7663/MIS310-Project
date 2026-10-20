@@ -109,6 +109,11 @@ main {
     border-color: #405a46;
 }
 
+.footer-link {
+    animation: none;
+    transition: none;
+}
+
 .content-card a {
     color: var(--green);
     text-decoration: underline;
