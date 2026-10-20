@@ -1095,27 +1095,20 @@ h3[id] {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
     margin: 32px 0 36px;
-    padding: 0;
-    list-style: none;
-    counter-reset: home-step;
+    padding: 0 0 0 2rem;
+    list-style-type: decimal-leading-zero;
 }
 
 .home-steps li {
-    display: grid;
-    grid-template-columns: 32px 1fr;
-    align-items: start;
-    gap: 12px;
     padding: 16px 0;
     border-top: 1px solid var(--line);
-    counter-increment: home-step;
 }
 
-.home-steps li::before {
+.home-steps li::marker {
     color: var(--green);
-    content: counter(home-step, decimal-leading-zero);
     font-family: "JetBrains Mono", "JetBrains Mono Fallback", ui-monospace, "SF Mono", Menlo, monospace;
     font-size: 0.8rem;
-    opacity: 0.68;
+    font-weight: 700;
 }
 
 .js [data-reveal] {
