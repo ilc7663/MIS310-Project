@@ -322,34 +322,22 @@ main {
     grid-template-columns: repeat(2, minmax(280px, 1fr));
     gap: 24px 32px;
     margin: 40px 0 0;
-    padding: 0;
-    list-style: none;
-    counter-reset: education-fact;
+    padding: 0 0 0 2rem;
+    list-style-type: decimal-leading-zero;
 }
 
-.education-facts-list li > p {
-    grid-column: 2;
-}
 .education-facts-list li {
-    display: grid;
-    grid-template-columns: 42px minmax(0, 1fr);
-    gap: 16px;
-    align-items: start;
     min-width: 0;
     padding: 0 0 24px;
     border-top: 1px solid var(--line);
-    counter-increment: education-fact;
     box-sizing: border-box;
 }
 
-.education-facts-list li::before {
+.education-facts-list li::marker {
     color: var(--green);
-    content: counter(education-fact, decimal-leading-zero);
     font-family: "JetBrains Mono", "JetBrains Mono Fallback", ui-monospace, "SF Mono", Menlo, monospace;
     font-size: 0.8rem;
     font-weight: 700;
-    line-height: 1.7;
-    opacity: 0.7;
 }
 
 .education-facts-list h3,
@@ -857,26 +845,20 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0 28px;
     margin: 24px 0 0;
-    padding: 0;
-    list-style: none;
-    counter-reset: learning;
+    padding: 0 0 0 2rem;
+    list-style-type: decimal-leading-zero;
 }
 
 .about-learning-list li {
-    display: grid;
-    grid-template-columns: 34px 1fr;
-    gap: 10px;
     padding: 14px 0;
     border-top: 1px solid var(--line);
-    counter-increment: learning;
 }
 
-.about-learning-list li::before {
+.about-learning-list li::marker {
     color: var(--green);
-    content: counter(learning, decimal-leading-zero);
     font-family: "JetBrains Mono", "JetBrains Mono Fallback", ui-monospace, "SF Mono", Menlo, monospace;
     font-size: 0.8rem;
-    opacity: 0.68;
+    font-weight: 700;
 }
 
 .about-learning-list a {
