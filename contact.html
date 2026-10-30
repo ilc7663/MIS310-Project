@@ -18,23 +18,36 @@
 
 	<main>
 		<h1>Contact Us</h1>
-		<p>Have a question or want to share feedback about this website? Use the form below to get in touch.</p>
+		<p>Have a question or want to share feedback about this website? Use the form below.</p>
+		<p id="form-note">Your responses will be sent to the MIS 310 form-processing page. Please do not include sensitive personal information.</p>
+		<h2 id="contact-form-heading">Send a message</h2>
 
-		<form action="contact.html" method="get">
-			<p>
-				<label for="name">Name:</label><br />
-				<input type="text" id="name" name="name" required />
-			</p>
+		<form class="contact-form" action="https://miswebapps.uncw.edu/mis310/form-submit.aspx" method="post" aria-labelledby="contact-form-heading" aria-describedby="form-note">
+			<div class="contact-form-field">
+				<label for="name">Name</label>
+				<input type="text" id="name" name="name" autocomplete="name" required />
+			</div>
 
-			<p>
-				<label for="email">Email:</label><br />
-				<input type="email" id="email" name="email" required />
-			</p>
+			<div class="contact-form-field">
+				<label for="email">Email address</label>
+				<input type="email" id="email" name="email" autocomplete="email" required />
+			</div>
 
-			<p>
-				<label for="message">Message:</label><br />
-				<textarea id="message" name="message" rows="6" cols="40" required></textarea>
-			</p>
+			<div class="contact-form-field">
+				<label for="topic">What is your message about?</label>
+				<select id="topic" name="topic" required>
+					<option value="" selected disabled>Select a topic</option>
+					<option value="question">Question about the site</option>
+					<option value="feedback">Website feedback</option>
+					<option value="accessibility">Accessibility feedback</option>
+					<option value="other">Other</option>
+				</select>
+			</div>
+
+			<div class="contact-form-field">
+				<label for="message">Message</label>
+				<textarea id="message" name="message" rows="6" maxlength="1000" required></textarea>
+			</div>
 
 			<button type="submit">Send Message</button>
 		</form>
