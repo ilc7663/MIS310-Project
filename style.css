@@ -1201,6 +1201,13 @@ h3[id] {
     transition: background 0.2s ease, transform 0.2s ease;
 }
 
+.checklist-toggle {
+    border: 0;
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+}
+
 .cta-button:hover,
 .cta-button:focus-visible {
     background: #d2c28d;
