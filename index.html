@@ -103,6 +103,64 @@
                     </article>
                 </div>
 
+                <section class="ip-demo" id="ip-demo" aria-labelledby="ip-demo-heading" data-reveal>
+                    <div>
+                        <p class="section-index">03 / TRY IT YOURSELF</p>
+                        <h2 id="ip-demo-heading">See What Your IP Reveals</h2>
+                        <p class="ip-demo-lede">Every website you visit can see your public IP address. Try the demo below to see the kind of approximate information it can suggest about you.</p>
+                    </div>
+                    <div class="ip-demo-grid">
+                        <article class="card ip-demo-card">
+                            <h3>Check your IP address</h3>
+                            <p>Before you click, here is what happens:</p>
+                            <ul class="ip-demo-notes">
+                                <li>Your public IP address is sent to a third-party IP lookup service so it can return the details below.</li>
+                                <li>The location shown is an estimate and may be inaccurate &mdash; it often points to your internet provider's hub rather than where you actually are.</li>
+                                <li>An IP address alone cannot reliably reveal a person's name or all of their public information.</li>
+                                <li>This site does not save the results or your answer.</li>
+                            </ul>
+                            <button class="cta-button ip-demo-button" id="ip-lookup-button" type="button">See what your IP reveals</button>
+                            <p class="ip-status" id="ip-status" role="status" hidden></p>
+                            <p class="ip-error" id="ip-error" role="alert" hidden></p>
+                            <div class="ip-results" id="ip-results" hidden>
+                                <dl>
+                                    <dt>IP address</dt>
+                                    <dd id="ip-result-ip"></dd>
+                                    <dt>City</dt>
+                                    <dd id="ip-result-city"></dd>
+                                    <dt>State / region</dt>
+                                    <dd id="ip-result-region"></dd>
+                                    <dt>Country</dt>
+                                    <dd id="ip-result-country"></dd>
+                                    <dt>Network provider</dt>
+                                    <dd id="ip-result-network"></dd>
+                                </dl>
+                                <div class="ip-confirm" id="ip-confirm">
+                                    <p class="ip-confirm-question">Is this information correct?</p>
+                                    <div class="ip-confirm-buttons">
+                                        <button id="ip-confirm-yes" type="button">Yes</button>
+                                        <button id="ip-confirm-no" type="button">No</button>
+                                    </div>
+                                    <p class="ip-confirm-response" id="ip-confirm-response" role="status" hidden></p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="card ip-demo-card">
+                            <h3>Optional: search your name</h3>
+                            <p>Curious what people find when they look you up? Open a Google search for your name in a new tab.</p>
+                            <ul class="ip-demo-notes">
+                                <li>The search is performed by Google, so Google receives whatever name you enter.</li>
+                                <li>Results may refer to other people who share the same name.</li>
+                            </ul>
+                            <form class="name-search-form" id="name-search-form" action="https://www.google.com/search" method="get" target="_blank" rel="noopener">
+                                <label for="name-search-input">Name to search</label>
+                                <input id="name-search-input" name="q" type="text" autocomplete="off" required placeholder="e.g. Jane Smith" />
+                                <button class="cta-button ip-demo-button" type="submit">Search this name on Google</button>
+                            </form>
+                        </article>
+                    </div>
+                </section>
+
                 <section class="home-cta" aria-labelledby="home-cta-title" data-reveal>
                     <div class="home-cta-inner">
                         <h2 id="home-cta-title">Start Managing Your Digital Footprint</h2>
@@ -123,23 +181,6 @@
             <a class="footer-link" href="sitemap.html">HTML Sitemap</a>
             <a class="footer-link" href="#top">Back to top</a>
         </footer>
-        <script>
-            const revealItems = document.querySelectorAll("[data-reveal]");
-
-            if ("IntersectionObserver" in window) {
-                const revealObserver = new IntersectionObserver((entries, observer) => {
-                    entries.forEach((entry) => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add("is-visible");
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.15 });
-
-                revealItems.forEach((item) => revealObserver.observe(item));
-            } else {
-                revealItems.forEach((item) => item.classList.add("is-visible"));
-            }
-        </script>
+        <script src="script.js"></script>
     </body>
 </html>

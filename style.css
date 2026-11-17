@@ -1644,3 +1644,219 @@ li {
         padding: 24px 22px;
     }
 }
+
+.home-page .ip-demo {
+    display: grid;
+    gap: 32px;
+    padding: 64px 0 0;
+    margin-bottom: 24px;
+    border-top: 1px solid var(--line);
+}
+
+.home-page .ip-demo h2 {
+    max-width: 16ch;
+    margin: 0 0 18px;
+    color: var(--green);
+    font-size: 3rem;
+    line-height: 1.05;
+}
+
+.ip-demo-lede {
+    max-width: 62ch;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.ip-demo-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: 24px;
+    align-items: start;
+}
+
+.ip-demo-card {
+    margin-bottom: 0;
+}
+
+.ip-demo-card h3 {
+    margin: 0;
+    color: var(--green);
+    font-size: 1.5rem;
+}
+
+.ip-demo-card p {
+    margin: 0;
+}
+
+.ip-demo-notes {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.ip-demo-notes li {
+    margin-bottom: 8px;
+}
+
+.ip-demo-notes li::marker {
+    color: #56785b;
+}
+
+.ip-demo-button {
+    border: 0;
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.ip-demo-button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+    transform: none;
+}
+
+.ip-demo-button:focus-visible {
+    outline: 3px solid #405a46;
+    outline-offset: 3px;
+}
+
+.ip-status {
+    color: var(--green);
+    font-weight: 600;
+}
+
+.ip-error {
+    color: #8a2f2b;
+    font-weight: 600;
+}
+
+.ip-demo [hidden] {
+    display: none !important;
+}
+
+.ip-results {
+    display: grid;
+    gap: 18px;
+}
+
+.ip-results dl {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 8px 20px;
+    margin: 0;
+    padding: 18px 20px;
+    background: var(--soft-green);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+}
+
+.ip-results dt {
+    color: var(--green);
+    font-weight: 700;
+}
+
+.ip-results dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.ip-confirm-question {
+    font-weight: 700;
+}
+
+.ip-confirm-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.ip-confirm-buttons button {
+    min-height: 44px;
+    min-width: 88px;
+    padding: 8px 22px;
+    border: 1px solid var(--green);
+    border-radius: 4px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.ip-confirm-buttons button:focus-visible {
+    outline: 3px solid #405a46;
+    outline-offset: 3px;
+}
+
+#ip-confirm-yes {
+    background: var(--green);
+    color: #fff;
+}
+
+#ip-confirm-yes:hover {
+    background: #243127;
+}
+
+#ip-confirm-no {
+    background: transparent;
+    color: var(--green);
+}
+
+#ip-confirm-no:hover {
+    background: var(--soft-green);
+}
+
+.ip-confirm-response {
+    margin-top: 12px;
+    color: var(--green);
+    font-weight: 600;
+}
+
+.name-search-form {
+    display: grid;
+    gap: 10px;
+}
+
+.name-search-form label {
+    color: var(--ink);
+    font-weight: 700;
+}
+
+.name-search-form input {
+    width: 100%;
+    min-height: 48px;
+    padding: 10px 12px;
+    border: 1px solid #718473;
+    border-radius: 4px;
+    background: #fff;
+    color: var(--ink);
+    font: inherit;
+}
+
+.name-search-form input:focus-visible {
+    outline: 3px solid #405a46;
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    .ip-demo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-page .ip-demo {
+        gap: 20px;
+        padding-top: 42px;
+    }
+
+    .home-page .ip-demo h2 {
+        font-size: 2.5rem;
+    }
+
+    .ip-results dl {
+        grid-template-columns: 1fr;
+        gap: 2px;
+    }
+
+    .ip-results dd {
+        margin-bottom: 10px;
+    }
+}
