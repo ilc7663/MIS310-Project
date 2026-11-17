@@ -117,6 +117,7 @@
                                 <li>Your public IP address is sent to a third-party IP lookup service so it can return the details below.</li>
                                 <li>The location shown is an estimate and may be inaccurate &mdash; it often points to your internet provider's hub rather than where you actually are.</li>
                                 <li>An IP address alone cannot reliably reveal a person's name or all of their public information.</li>
+                                <li>Your browser also tells every website what kind of device and browser you are using &mdash; we read that locally to show it below; it is not sent to the lookup service by this site.</li>
                                 <li>This site does not save the results or your answer.</li>
                             </ul>
                             <button class="cta-button ip-demo-button" id="ip-lookup-button" type="button">See what your IP reveals</button>
@@ -142,8 +143,14 @@
                                     <dd id="ip-result-network"></dd>
                                     <dt>Network number (ASN)</dt>
                                     <dd id="ip-result-asn"></dd>
+                                    <dt>Device type</dt>
+                                    <dd id="ip-result-device-type"></dd>
+                                    <dt>Operating system</dt>
+                                    <dd id="ip-result-os"></dd>
+                                    <dt>Browser</dt>
+                                    <dd id="ip-result-browser"></dd>
                                 </dl>
-                                <p class="ip-results-note">These details describe your internet connection, not you personally. The coordinates and postal code point to the estimated area of your provider's network &mdash; often miles from your real location.</p>
+                                <p class="ip-results-note">These details describe your internet connection and device, not you personally. The coordinates and postal code point to the estimated area of your provider's network &mdash; often miles from your real location &mdash; and the device details are your browser's own description of itself, which can be imprecise.</p>
                                 <div class="ip-confirm" id="ip-confirm">
                                     <p class="ip-confirm-question">Is this information correct?</p>
                                     <div class="ip-confirm-buttons">

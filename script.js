@@ -48,6 +48,41 @@ if (ipLookupButton) {
     timezone: document.querySelector("#ip-result-timezone"),
     network: document.querySelector("#ip-result-network"),
     asn: document.querySelector("#ip-result-asn"),
+    deviceType: document.querySelector("#ip-result-device-type"),
+    os: document.querySelector("#ip-result-os"),
+    browser: document.querySelector("#ip-result-browser"),
+  };
+
+  // Read locally from the visitor's own browser; never sent anywhere by this site.
+  const getDeviceDetails = () => {
+    const ua = navigator.userAgent || "";
+    const uaData = navigator.userAgentData;
+
+    let deviceType = "Computer (desktop or laptop)";
+    const isTablet =
+      /iPad|Tablet/i.test(ua) || (/Android/i.test(ua) && !/Mobile/i.test(ua));
+    if (isTablet) {
+      deviceType = "Tablet";
+    } else if ((uaData && uaData.mobile) || /Mobi|iPhone|Android/i.test(ua)) {
+      deviceType = "Mobile phone";
+    }
+
+    let os = "";
+    if (/Windows/i.test(ua)) os = "Windows";
+    else if (/iPhone|iPad|iPod/i.test(ua)) os = "iOS / iPadOS";
+    else if (/Mac/i.test(ua)) os = "macOS";
+    else if (/Android/i.test(ua)) os = "Android";
+    else if (/CrOS/i.test(ua)) os = "ChromeOS";
+    else if (/Linux/i.test(ua)) os = "Linux";
+
+    let browser = "";
+    if (/Edg\//.test(ua)) browser = "Microsoft Edge";
+    else if (/OPR\/|Opera/.test(ua)) browser = "Opera";
+    else if (/Firefox\//.test(ua)) browser = "Firefox";
+    else if (/Chrome\//.test(ua)) browser = "Chrome";
+    else if (/Safari\//.test(ua)) browser = "Safari";
+
+    return { deviceType, os, browser };
   };
 
   const formatCoords = (lat, lon) =>
@@ -129,6 +164,7 @@ if (ipLookupButton) {
       return;
     }
 
+    Object.assign(details, getDeviceDetails());
     Object.keys(resultFields).forEach((key) => {
       resultFields[key].textContent = details[key] || "Not available";
     });
