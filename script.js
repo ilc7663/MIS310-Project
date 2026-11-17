@@ -42,9 +42,18 @@ if (ipLookupButton) {
     ip: document.querySelector("#ip-result-ip"),
     city: document.querySelector("#ip-result-city"),
     region: document.querySelector("#ip-result-region"),
+    postal: document.querySelector("#ip-result-postal"),
     country: document.querySelector("#ip-result-country"),
+    coords: document.querySelector("#ip-result-coords"),
+    timezone: document.querySelector("#ip-result-timezone"),
     network: document.querySelector("#ip-result-network"),
+    asn: document.querySelector("#ip-result-asn"),
   };
+
+  const formatCoords = (lat, lon) =>
+    typeof lat === "number" && typeof lon === "number"
+      ? lat.toFixed(4) + ", " + lon.toFixed(4)
+      : "";
 
   const fetchFromIpapi = async () => {
     const response = await fetch("https://ipapi.co/json/");
@@ -59,8 +68,12 @@ if (ipLookupButton) {
       ip: data.ip,
       city: data.city,
       region: data.region,
+      postal: data.postal,
       country: data.country_name,
+      coords: formatCoords(data.latitude, data.longitude),
+      timezone: data.timezone,
       network: data.org,
+      asn: data.asn,
     };
   };
 
@@ -77,8 +90,12 @@ if (ipLookupButton) {
       ip: data.ip,
       city: data.city,
       region: data.region,
+      postal: data.postal,
       country: data.country,
+      coords: formatCoords(data.latitude, data.longitude),
+      timezone: data.timezone && data.timezone.id,
       network: data.connection && (data.connection.isp || data.connection.org),
+      asn: data.connection && data.connection.asn ? "AS" + data.connection.asn : "",
     };
   };
 
